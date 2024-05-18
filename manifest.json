@@ -1,0 +1,23 @@
+{
+  "manifest_version": 2,
+  "name": "Highlight Links with GUI",
+  "version": "1.0",
+  "description": "Highlight elements based on user input selector",
+  "permissions": [
+    "activeTab"
+  ],
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon.png",
+      "48": "icon.png",
+      "128": "icon.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}
